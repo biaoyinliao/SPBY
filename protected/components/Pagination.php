@@ -59,6 +59,7 @@
 		}
 
 		private function first(){
+                        $html='';
 			if($this->page==1)
 				$html.='';
 			else
@@ -68,6 +69,7 @@
 		}
 
 		private function prev(){
+                        $html='';
 			if($this->page==1)
 				$html.='';
 			else
@@ -106,6 +108,7 @@
 		}
 
 		private function next(){
+                        $html='';
 			if($this->page==$this->pageNum)
 				$html.='';
 			else
@@ -115,6 +118,7 @@
 		}
 
 		private function last(){
+                        $html='';
 			if($this->page==$this->pageNum)
 				$html.='';
 			else

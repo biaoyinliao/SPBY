@@ -39,13 +39,13 @@ class UserIdentity extends CUserIdentity
             //find() 如果没有查询出来数据，则会返回null
             //findAll()  空数据会返回空数组
             //根据用户名查询是否有一个用户信息
-            $user_model = User::model()->find('user_name=:name',array(':name'=>$this->username));
+            $user_model = Manager::model()->find('manager_name=:name',array(':name'=>$this->username));
             
             //如果用户名不存在
             if($user_model === null){
                 $this -> errorCode = self::ERROR_USERNAME_INVALID;
                 return false;
-            } else if ($user_model->user_password !== $this -> password){
+            } else if ($user_model->manager_password !== $this -> password){
                 //密码判断
                 $this->errorCode=self::ERROR_PASSWORD_INVALID;
                 return false;

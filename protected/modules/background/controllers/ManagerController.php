@@ -36,7 +36,7 @@ class ManagerController extends Controller{
         //session和cookie一并删除
         //Yii::app()->user->logout();
         
-        $this ->redirect ('./index.php?r=background/mannager/login');
+        $this ->redirect ('./index.php?r=background/manager/login');
     }
 
 }

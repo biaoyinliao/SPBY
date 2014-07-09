@@ -26,8 +26,8 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-      	/*引入后台*/
-		'background',
+              /*引入后台*/
+              'background',
 	),
 
 	// application components
@@ -60,7 +60,7 @@ return array(
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
-            'enableParamLogging'=>true,
+                        'enableParamLogging'=>true,
 		),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

@@ -8,6 +8,10 @@
 
         <link href="<?php echo BACKGROUND_CSS_URL ?>User_Login.css" type="text/css" rel="stylesheet" />
     </head><body id="userlogin_body">
+         <style type="text/css">
+            div .errorMessage{color:red;}
+             label  .required {color:red;}
+        </style>
         <div></div>
         <div id="user_login">
             <dl>
@@ -23,16 +27,16 @@
                             <li class="user_main_c">
                                 <div class="user_main_box">
                                     <ul>
-                                        <li class="user_main_text"><?php echo $form->labelEx($user_login,'username'); ?> </li>
+                                        <li class="user_main_text"><?php echo $form->label($user_login,'username'); ?> </li>
                                         <li class="user_main_input">
-                                             <?php echo $form->textField($user_login,'username'); ?>
+                                             <?php echo $form->textField($user_login,'username',array('style'=>"width:150px;border:1px solide #333;")); ?>
                                             <?php echo $form->error($user_login,'username'); ?> </li></ul>
                                     <ul>
-                                        <li class="user_main_text"><?php echo $form->labelEx($user_login,'password'); ?> </li>
+                                        <li class="user_main_text"><?php echo $form->label($user_login,'password'); ?> </li>
                                         <li class="user_main_input">
-                                             <?php echo $form->textField($user_login,'password',array('class'=>'inputBg')); ?>
+                                             <?php echo $form->passwordField($user_login,'password',array('style'=>"width:150px;border:1px solide #333;")); ?>
                                             <?php echo $form->error($user_login,'password'); ?>
-                                        </li>
+                                        </li>              
                                     </ul>
                                     <!--
                                     <ul>

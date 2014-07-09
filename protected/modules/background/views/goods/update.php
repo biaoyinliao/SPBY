@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head>
-        <title>修改商品信息</title>
+        <title>添加商品</title>
         <meta http-equiv="content-type" content="text/html;charset=utf-8">
         <link href="<?php echo BACKGROUND_CSS_URL; ?>mine.css" type="text/css" rel="stylesheet">
     </head>
@@ -24,8 +24,7 @@
 
         <div style="font-size: 13px;margin: 10px 5px">
             
-            <?php $form = $this -> beginWidget('CActiveForm',array( 'id'=>'link-form','enableAjaxValidation'=>false,'htmlOptions' => array('enctype'=>'multipart/form-data'),'action'=>'./index.php?r=background/goods/update2')); 
-            ?>
+            <?php $form = $this -> beginWidget('CActiveForm',array( 'id'=>'link-form','enableAjaxValidation'=>false,'htmlOptions' => array('enctype'=>'multipart/form-data'),)); ?>
             <table border="1" width="100%" class="table_a">
                 <tr>
                     <td>
@@ -64,20 +63,31 @@
                 <!--
                图片路径
                 -->
-                 <tr>
+                <tr>
                     <td>
-                        <?php echo $form->labelEx($goods_model, 'goods_path'); ?>  
+                        <?php echo "原始图片"; ?>  
                     </td>
                     <td>
-                        <?php //echo $form -> textField($goods_model,'goods_path'); ?>
-                        <?php echo $form->FileField($goods_model, 'goods_path'); ?> 
-                        <?php echo $form->error($goods_model, 'goods_path'); ?>
+                       
+                            <img src="<?php echo $goods_model ->goods_path; ?>"  width="20%"></img>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        <?php echo $form->labelEx($goods_model, 'goods_image'); ?>  
+                    </td>
+                    <td>
+                        <!--<input type="file" name="file" />-->
+                        <?php echo $form->FileField($goods_model,'goods_image'); ?> 
+                        <?php echo $form->error($goods_model,'goods_image'); ?>
+                        <?php echo $form->hiddenField($goods_model, 'goods_path'); ?>
+                          <?php //echo $form->error($goods_model, 'goods_path'); ?>            
                     </td>
                 </tr>
                 
                 <tr>
                     <td>
-                        <?php echo $form -> labelEx($goods_model, 'goods_introduce');?>
+                        <?php echo $form -> labelEx($goods_model, 'goods_introduce') ?>
                     </td>
                     <td>
                         <?php echo $form -> textArea($goods_model,'goods_introduce',array('cols'=>60,'rows'=>10)); ?>
@@ -86,7 +96,6 @@
                 
                 <tr>
                     <td colspan="2" align="center">
-                        <input type="hidden" name="id" value="0"></input>
                         <input type="submit" value="提交">
                     </td>
                 </tr>  

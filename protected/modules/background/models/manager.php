@@ -17,7 +17,7 @@ class Manager extends CActiveRecord{
     
     //定义数据表名字
     public function tableName(){
-        return "mananger";
+        return "manager";
     }
     
     //设置标签名字与数据库字段对应

@@ -9,7 +9,7 @@ class LoginForm extends CFormModel
 {
 	public $username;
 	public $password;
-	public $rememberMe;
+	//public $rememberMe;
 
 	private $_identity;
 
@@ -22,12 +22,12 @@ class LoginForm extends CFormModel
 	{
 		return array(
 			// username and password are required
-			array('username, password', 'required'),
+			//array('username, password', 'required'),
                         //array('username', 'required'),
-                        //array('username','safe'),
-			//array('password', 'required','message'=>'用户名、密码必须填写'),
+                        array('username','safe'),
+			array('password', 'required','message'=>'用户名、密码必须填写'),
 			// rememberMe needs to be a boolean
-			array('rememberMe', 'boolean'),
+			//array('rememberMe', 'boolean'),
 			// password needs to be authenticated
 			array('password', 'authenticate'),
 		);
@@ -39,9 +39,9 @@ class LoginForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-			'rememberMe'=>'Remember me next time',
-                    //'username'=>'用户名',
-                   // 'password'=>"密&nbsp;&nbsp;&nbsp;&nbsp;码",
+			//'rememberMe'=>'Remember me next time',
+                    'username'=>'用户名',
+                    'password'=>"密&nbsp;&nbsp;&nbsp;&nbsp;码",
 		);
 	}
 

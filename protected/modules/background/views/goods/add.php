@@ -71,8 +71,7 @@
                           <?php echo $form->FileField($goods_model, 'goods_path'); ?> 
                           <?php echo $form->error($goods_model, 'goods_path'); ?>            
                     </td>
-                </tr>
-                
+                </tr>       
                 <tr>
                     <td>
                         <?php echo $form -> labelEx($goods_model, 'goods_introduce') ?>

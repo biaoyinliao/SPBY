@@ -4,6 +4,7 @@
         <meta http-equiv=content-type content="text/html; charset=utf-8" />
         <link href="<?php echo BACKGROUND_CSS_URL; ?>admin.css" type="text/css" rel="stylesheet" />
     </head>
+    <?php date_default_timezone_set('PRC');?>
     <body>
         <table cellspacing=0 cellpadding=0 width="100%" align=center border=0>
             <tr height=28>
@@ -21,9 +22,9 @@
                     <table height=100 cellspacing=0 cellpadding=0 width="100%" border=0>
 
                         <tr>
-                            <td>当前时间：2008-12-27 17:03:55</td></tr>
+                            <td>当前时间：<?php echo date('Y-m-d H:i:s');?></td></tr>
                         <tr>
-                            <td style="font-weight: bold; font-size: 16px">admin</td></tr>
+                            <td style="font-weight: bold; font-size: 16px"><?php echo Yii::app()->user->name; ?></td></tr>
                         <tr>
                             <td>欢迎进入网站管理中心！</td></tr></table></td></tr>
             <tr>

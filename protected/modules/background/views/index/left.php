@@ -23,7 +23,7 @@
     <body>
         <table height="100%" cellspacing=0 cellpadding=0 width=170 
                background=<?php echo BACKGROUND_IMG_URL; ?>menu_bg.jpg border=0>
-               <tr>
+            <tr>
                 <td valign=top align=middle>
                     <table cellspacing=0 cellpadding=0 width="100%" border=0>
 
@@ -113,20 +113,47 @@
                             <td align=middle width=30><img height=9 
                                                            src="<?php echo BACKGROUND_IMG_URL; ?>menu_icon.gif" width=9></td>
                             <td><a class=menuchild 
-                                   href="#" 
-                                   target=main>最新产品</a></td></tr>
+                                   href="./index.php?r=background/goods/newgoods" 
+                                   target="right">最新产品</a></td></tr>
+                            <?php
+                                $category["led发光字制作"] = "led发光字制作";
+                                $category["广告牌制作"] = "广告牌制作";
+                                $category["广告灯箱制作"] = "广告灯箱制作";
+                                $category["LED显示屏制作"] = "LED显示屏制作";
+                                $category["楼宇亮化工程"] = "楼宇亮化工程";
+                                $category["标识标牌制作"] = "标识标牌制作";
+                                $category["门头店招制作"] = "门头店招制作";
+                                $category["铜字铜牌制作"] = "铜字铜牌制作";
+                                $category["不锈钢金属字制作"] = "不锈钢金属字制作";
+                                $category["有机雕刻制品"] = "有机雕刻制品";
+                                $category["会议/活动/庆典"] = "会议/活动/庆典";
+                                $category["广告印刷制作"] = "广告印刷制作";
+                                $category["品牌包装设计"] = "品牌包装设计";
+                                $category["标志商标设计"] = "标志商标设计";
+                                $category["样本画册设计"] = "样本画册设计";
+                                $category["平面广告设计"] = "平面广告设计";
+                                $category["企业CI/VI设计"] = "企业CI/VI设计";
+                                $category["海报/广告设计"] = "海报/广告设计";
+                                $category["墙体/幕墙广告玻璃贴膜"] = "墙体/幕墙广告玻璃贴膜";
+                                foreach ($category as $_v) {
+                                ?>
+                            <tr height=20>
+                                <td align=middle width=30><img height=9 
+                                                               src="<?php echo BACKGROUND_IMG_URL; ?>menu_icon.gif" width=9></td>
+                                <td><a class=menuchild 
+                                       href="./index.php?r=background/goods/category&value=<?php echo $_v; ?>" 
+                                       target="right"><?php echo $_v; ?></a></td></tr>
+                                <?php
+                            }
+                            ?>
+                        <!--分类开始
                         <tr height=20>
                             <td align=middle width=30><img height=9 
-                                                           src="<?php echo BACKGROUND_IMG_URL; ?>menu_icon.gif" width=9></td>
+                                                           src="<?php //echo BACKGROUND_IMG_URL;  ?>menu_icon.gif" width=9></td>
                             <td><a class=menuchild 
-                                   href="#" 
-                                   target=main>分类管理</a></td></tr>
-                        <tr height=20>
-                            <td align=middle width=30><img height=9 
-                                                           src="<?php echo BACKGROUND_IMG_URL; ?>menu_icon.gif" width=9></td>
-                            <td><a class=menuchild 
-                                   href="#" 
-                                   target=main>子类管理</a></td></tr>
+                                   href="./index.php?r=background/goods/category&value='led发光字制作'" 
+                                   target="right">led发光字制作</a></td></tr>
+                        分类结束 -->           
                         <tr height=4>
                             <td colspan=2></td></tr></table>
                     <table cellspacing=0 cellpadding=0 width=150 border=0>
@@ -172,14 +199,14 @@
                             <td align=middle width=30><img height=9 
                                                            src="<?php echo BACKGROUND_IMG_URL; ?>menu_icon.gif" width=9></td>
                             <td><a class=menuchild 
-                                   href="#" 
-                                   target=main>分类管理</a></td></tr>
+                                   href="./index.php?r=background/goods/classic&id=1" 
+                                   target="right">经典案例展示</a></td></tr>
                         <tr height=20>
                             <td align=middle width=30><img height=9 
                                                            src="<?php echo BACKGROUND_IMG_URL; ?>menu_icon.gif" width=9></td>
                             <td><a class=menuchild 
-                                   href="#" 
-                                   target=main>子类管理</a></td></tr>
+                                   href="./index.php?r=background/goods/classic&id=2" 
+                                   target="right">最新经典案例</a></td></tr>
                         <tr height=4>
                             <td colspan=2></td></tr></table>
                     <table cellspacing=0 cellpadding=0 width=150 border=0>
@@ -343,7 +370,10 @@
                             <td align=middle width=30><img height=9 
                                                            src="<?php echo BACKGROUND_IMG_URL; ?>menu_icon.gif" width=9></td>
                             <td><a class=menuchild 
-                                   onclick="if (confirm('确定要退出吗？')) return true; else return false;" 
+                                   onclick="if (confirm('确定要退出吗？'))
+                                               return true;
+                                           else
+                                               return false;" 
                                    href="http://www.865171.cn" 
                                    target=_top>退出系统</a></td></tr></table></td>
                 <td width=1 bgcolor=#d1e6f7></td>
